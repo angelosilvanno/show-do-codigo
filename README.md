@@ -1,73 +1,106 @@
-# React + TypeScript + Vite
+# 🎮 Show do Código
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **Show do Código** é um quiz técnico gamificado inspirado no clássico *Show do Milhão*, totalmente focado no ecossistema de desenvolvimento de software. A missão é simples: responder perguntas progressivamente mais difíceis até conquistar o prêmio máximo virtual de **R$ 1.000.000** — só com conhecimento de código.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Visão Geral
 
-## React Compiler
+Este projeto foi concebido para proporcionar uma jornada imersiva a desenvolvedores, combinando UI responsiva, efeitos sonoros e mecânicas de jogo que reforçam o engajamento e a retenção de conteúdo técnico.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🕹️ Core Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎯 Trilhas de Conhecimento
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O jogador escolhe sua área:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Frontend**
+* **Backend**
+* **Mobile**
+* **Fullstack**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 🧠 Dinâmica de Jogo
+
+* Perguntas de múltipla escolha com feedback imediato
+* Progressão incremental de dificuldade
+* Sem barras de rolagem — experiência 100% controlada
+
+### 🛟 Sistema de Ajudas
+
+| Ajuda                 | Descrição                           |
+| --------------------- | ----------------------------------- |
+| ⏭️ **Pular**          | Avança para a próxima pergunta      |
+| ✂️ **Eliminar**       | Remove duas alternativas incorretas |
+| 🎓 **Universitários** | Sugestão simulada de resposta       |
+
+### 🔊 Feedback e Interação
+
+* Efeitos sonoros (suspense, acerto, erro) via **Howler.js**
+* Modais customizados e UI responsiva
+* Nada de `alert` nativo — só componentes proprietários
+
+---
+
+## 🔨 Instalação e Execução
+
+**Pré-requisitos**
+
+* Node.js instalado
+* Git instalado
+
+```bash
+# Clone o repositório
+git clone https://github.com/angelosilvanno/show-do-codigo.git
+
+# Acesse a pasta
+cd show-do-codigo
+
+# Instale as dependências
+npm install
+
+# Execute o servidor local
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Acesse no navegador:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+http://localhost:5173
+```
+
+### 🔈 Sons (Opcional, porém recomendado)
+
+Adicione os arquivos abaixo em `public/sounds`:
+
+```
+suspense.mp3
+correct.mp3
+wrong.mp3
+```
+
+---
+
+## 🧰 Stack Tecnológica
+
+| Tecnologia       | Finalidade                                  |
+| ---------------- | ------------------------------------------- |
+| **React**        | UI componentizada e escalável               |
+| **TypeScript**   | Segurança de tipos em todo o projeto        |
+| **Vite**         | Dev server e build ultrarrápido             |
+| **Tailwind CSS** | Estilização com produtização de componentes |
+| **Howler.js**    | Engine de áudio                             |
+| **ESLint**       | Padronização e governança de código         |
+
+---
+
+## 👨‍💻 Autor
+
+* **Ângelo Silvano** - *Desenvolvedor Frontend* - [angelosilvanno](https://github.com/angelosilvanno)
+
+---
+
+## 🏁 Status do Projeto
+
+**Em evolução contínua** — novas trilhas, melhorias de UI e funcionalidades avançadas em pipeline.
