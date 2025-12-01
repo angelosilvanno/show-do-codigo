@@ -6,7 +6,7 @@ O **Show do Código** é um quiz técnico gamificado inspirado no clássico *Sho
 
 Este projeto foi concebido para proporcionar uma jornada imersiva a desenvolvedores, combinando UI responsiva, efeitos sonoros e mecânicas de jogo que reforçam o engajamento e a retenção de conteúdo técnico.
 
-## 🕹️ Core Features
+## 🕹️ Principais Funcionalidades
 
 ### 🎯 Trilhas de Conhecimento
 
