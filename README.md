@@ -73,7 +73,7 @@ correct.mp3
 wrong.mp3
 ```
 
-## 🧰 Stack Tecnológica
+## 🧰 Tecnologias usadas
 
 | Tecnologia       | Finalidade                                  |
 | ---------------- | ------------------------------------------- |
