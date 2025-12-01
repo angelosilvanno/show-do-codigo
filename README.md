@@ -92,4 +92,4 @@ wrong.mp3
 
 ## 🏁 Status do Projeto
 
-**Em evolução contínua** — novas trilhas, melhorias de UI e funcionalidades avançadas em pipeline.
+* **Em evolução contínua** — novas trilhas, melhorias de UI e funcionalidades avançadas já planejadas.
