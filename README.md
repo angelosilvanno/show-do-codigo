@@ -73,8 +73,6 @@ correct.mp3
 wrong.mp3
 ```
 
----
-
 ## 🧰 Stack Tecnológica
 
 | Tecnologia       | Finalidade                                  |
@@ -86,13 +84,11 @@ wrong.mp3
 | **Howler.js**    | Engine de áudio                             |
 | **ESLint**       | Padronização e governança de código         |
 
----
 
 ## 👨‍💻 Autor
 
 * **Ângelo Silvano** - *Desenvolvedor Frontend* - [angelosilvanno](https://github.com/angelosilvanno)
 
----
 
 ## 🏁 Status do Projeto
 
