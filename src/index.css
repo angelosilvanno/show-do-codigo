@@ -1,9 +1,6 @@
-/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* --- ADICIONE DAQUI PARA BAIXO --- */
 
 /* Esconde a barra de rolagem no Chrome, Safari e Edge */
 ::-webkit-scrollbar {
@@ -13,4 +10,25 @@
 /* Esconde a barra de rolagem no Firefox */
 html, body {
   scrollbar-width: none;
+}
+
+/* --- HEADER --- */
+@media (max-width: 640px) {
+  header {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  header span {
+    font-size: 0.60rem !important;
+    letter-spacing: 0.05em !important;
+  }
+  
+  @media (max-width: 350px) {
+    header span:first-of-type {
+      display: none;
+    }
+  }
 }
