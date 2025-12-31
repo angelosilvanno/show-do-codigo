@@ -63,9 +63,9 @@ npm run dev
 http://localhost:5173
 ```
 
-### 🔈 Sons (Opcional, porém recomendado)
+### 🔈 Sons 
 
-Adicione os arquivos abaixo em `public/sounds`:
+`public/sounds`:
 
 ```
 suspense.mp3
