@@ -21,7 +21,6 @@ O jogador escolhe sua área:
 
 * Perguntas de múltipla escolha com feedback imediato
 * Progressão incremental de dificuldade
-* Sem barras de rolagem — experiência 100% controlada
 
 ### 🛟 Sistema de Ajudas
 
