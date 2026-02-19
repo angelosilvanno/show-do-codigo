@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Hero from "../components/Hero"; // Importamos o seu Hero original
+import Hero from "../components/Hero"; 
 import type { GameTheme } from "../data/types";
 
 interface HomeProps {
@@ -59,15 +59,11 @@ export default function Home({ onStartGame }: HomeProps) {
         {/* CENA 1: A INTRODUÇÃO (Seu design original) */}
         {!showThemes ? (
           <div className="flex-1 flex flex-col animate-in fade-in duration-500">
-            {/* 
-                Passamos uma função para o Hero: 
-                Quando clicar, em vez de começar o jogo, ele ativa a tela de temas 
-            */}
             <Hero onStartClick={() => setShowThemes(true)} />
           </div>
         ) : (
           
-          /* CENA 2: A SELEÇÃO DE TEMAS (Aparece ao clicar) */
+          /* SELEÇÃO DE TEMAS */
           <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 animate-in zoom-in-95 duration-500">
             
             {/* Botão de Voltar (caso o usuário mude de ideia) */}
