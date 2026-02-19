@@ -1,6 +1,6 @@
 # 🎮 Show do Código
 
-O **Show do Código** é um quiz técnico gamificado inspirado no clássico *Show do Milhão*, totalmente focado no ecossistema de desenvolvimento de software. A missão é simples: responder perguntas progressivamente mais difíceis até conquistar o prêmio máximo virtual de **R$ 1.000.000** — só com conhecimento de código.
+O **Show do Código** é um quiz técnico em formato de jogo, inspirado no Show do Milhão e totalmente voltado para o mundo do desenvolvimento de software. A ideia é simples: responder perguntas que vão ficando mais difíceis a cada etapa até chegar ao prêmio virtual máximo de **R$ 1.000.000**, usando apenas conhecimento de código.
 
 ## 🚀 Visão Geral
 
@@ -21,7 +21,6 @@ O jogador escolhe sua área:
 
 * Perguntas de múltipla escolha com feedback imediato
 * Progressão incremental de dificuldade
-* Sem barras de rolagem — experiência 100% controlada
 
 ### 🛟 Sistema de Ajudas
 
@@ -63,9 +62,9 @@ npm run dev
 http://localhost:5173
 ```
 
-### 🔈 Sons (Opcional, porém recomendado)
+### 🔈 Sons 
 
-Adicione os arquivos abaixo em `public/sounds`:
+`public/sounds`:
 
 ```
 suspense.mp3
