@@ -4,12 +4,12 @@ export default function Footer() {
       
       <div className="max-w-4xl mx-auto text-center px-4 flex flex-col items-center">
         
-        <span className="text-xs font-bold text-blue-500/50 uppercase tracking-[0.2em] mb-2">
+        <span className="text-xs font-bold text-blue-500/50 uppercase tracking- mb-2">
           Game Version 1.0
         </span>
 
         <p className="text-xs opacity-60">
-          © 2025 Show do Código. Todos os direitos reservados.
+          © {new Date().getFullYear()} Show do Código. Todos os direitos reservados.
         </p>
 
       </div>
