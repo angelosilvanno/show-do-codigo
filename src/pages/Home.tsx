@@ -1,4 +1,3 @@
-// src/pages/Home.tsx
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -10,10 +9,8 @@ interface HomeProps {
 }
 
 export default function Home({ onStartGame }: HomeProps) {
-  // Estado para controlar a troca de tela (Intro -> Seleção)
   const [showThemes, setShowThemes] = useState(false);
 
-  // Configuração dos Cards de Tema
   const themes = [
     {
       id: 'frontend',
@@ -50,62 +47,60 @@ export default function Home({ onStartGame }: HomeProps) {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-blue-950 to-purple-950 text-white overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-blue-950 to-purple-950 text-white overflow-x-hidden">
       
       <Header />
 
-      <main className="flex-1 flex flex-col relative w-full">
+      <main className="flex-1 flex flex-col relative w-full overflow-y-auto">
         
-        {/* CENA 1: A INTRODUÇÃO (Seu design original) */}
         {!showThemes ? (
           <div className="flex-1 flex flex-col animate-in fade-in duration-500">
             <Hero onStartClick={() => setShowThemes(true)} />
           </div>
         ) : (
           
-          /* SELEÇÃO DE TEMAS */
-          <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 animate-in zoom-in-95 duration-500">
+          <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 md:py-12 animate-in zoom-in-95 duration-500">
             
-            {/* Botão de Voltar (caso o usuário mude de ideia) */}
             <button 
                 onClick={() => setShowThemes(false)}
-                className="absolute top-4 left-4 md:left-10 text-sm text-blue-300 hover:text-white uppercase tracking-widest flex items-center gap-2 transition-colors"
+                className="absolute top-4 left-4 md:top-8 md:left-10 text-xs md:text-sm text-blue-300 hover:text-white uppercase tracking-widest flex items-center gap-2 transition-colors z-20"
             >
                 ← Voltar
             </button>
 
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-2 drop-shadow-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-white to-blue-100">
-                ESCOLHA SUA TRILHA
+            <div className="text-center mb-8 md:mb-12 mt-8 md:mt-0">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter mb-4 drop-shadow-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-100 via-white to-blue-100 uppercase">
+                Escolha sua trilha
               </h2>
-              <p className="text-blue-200/60 text-base md:text-lg max-w-xl mx-auto">
-                Selecione sua especialidade para começar o desafio.
+              <p className="text-blue-200/60 text-sm md:text-lg max-w-lg mx-auto px-4">
+                Selecione sua especialidade para começar o desafio e testar seus conhecimentos.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 w-full max-w-4xl px-2 md:px-0">
               {themes.map((theme) => (
                 <button
                   key={theme.id}
                   onClick={() => onStartGame(theme.id as GameTheme)}
                   className={`
-                    group relative overflow-hidden rounded-2xl p-5 text-left border border-white/10
-                    bg-slate-900/40 backdrop-blur-sm transition-all duration-300
-                    hover:scale-[1.02] hover:border-white/30 hover:shadow-2xl
+                    group relative overflow-hidden rounded-2xl md:rounded-3xl p-5 md:p-7 text-left border border-white/10
+                    bg-slate-900/40 backdrop-blur-md transition-all duration-300
+                    hover:scale-[1.03] hover:border-white/30 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]
+                    active:scale-95
                   `}
                 >
                   <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 bg-gradient-to-br ${theme.color} transition-opacity duration-500`} />
                   <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 border-2 border-transparent bg-clip-border rounded-2xl transition-all duration-300 ${theme.shadow} shadow-sm`} />
 
-                  <div className="relative z-10 flex items-center gap-4">
-                    <div className={`w-12 h-12 shrink-0 rounded-lg flex items-center justify-center text-2xl bg-gradient-to-br ${theme.color} shadow-lg`}>
+                  <div className="relative z-10 flex items-center gap-5">
+                    <div className={`w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${theme.color} shadow-lg transform group-hover:rotate-6 transition-transform duration-300`}>
                       {theme.icon}
                     </div>
                     <div>
-                        <h3 className="text-xl font-bold tracking-wider mb-0 group-hover:text-white transition-colors">
+                        <h3 className="text-lg md:text-2xl font-black tracking-tight mb-1 group-hover:text-white transition-colors">
                             {theme.label}
                         </h3>
-                        <p className="text-xs text-slate-400 group-hover:text-slate-200">
+                        <p className="text-xs md:text-sm text-slate-400 group-hover:text-slate-200 leading-tight">
                             {theme.desc}
                         </p>
                     </div>
